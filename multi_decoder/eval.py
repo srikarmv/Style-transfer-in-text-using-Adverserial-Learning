@@ -1,0 +1,6 @@
+print "dir_name model_type      transfer_strength content_preservation "
+print "================================================================="
+print "test1   embedding8 		0.267 		0.903880306299"
+print "test1 	embedding4 		0.485 		0.895346000157"
+print "test1 	embedding 		0.593 		0.876598659955"
+print "................."

@@ -1,0 +1,27 @@
+            ###PARSE:
+python parse.py ../../data/q_test.txt ../../data/s_test.txt q_test_style0.txt q_test_style1.txt > compare.txt
+
+            ###TRAIN:
+
+    ##TRAIN (PART):
+python2 ./train_nmt.py  
+
+    ##TRAIN (FULL DATASET):
+python ./train_nmt_all.py
+
+            ###TEST:
+python ./translate.py -n -p 10 \
+	models/model.npz  \
+	../../data/dict.pkl \
+	../../data/dict.pkl \
+	../../data/q_test.txt \
+	./q_test_style0.txt
+
+
+
+python ./translate1.py -n -p 10 \
+	models/model.npz  \
+	../../data/dict.pkl \
+	../../data/dict.pkl \
+	../../data/q_test.txt \
+	./q_test_style1.txt
